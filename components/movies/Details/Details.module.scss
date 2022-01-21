@@ -1,0 +1,112 @@
+@import '../../../styles/settings';
+
+.Movie {
+  margin: 0 15px 20px;
+  padding: 10px;
+
+  &,
+  &__Details {
+    position: relative;
+
+    @include media-up(#{map-get($breakpoints, 'md')}) {
+      align-items: flex-start;
+      display: flex;
+    }
+  }
+
+  &__Title {
+    line-height: 1.2;
+
+    @include media-up(#{map-get($breakpoints, 'md')}) {
+      display: none;
+    }
+  }
+
+  &__Details {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 15px;
+  }
+
+  &__Poster {
+    width: 300px;
+
+    @include media-up(#{map-get($breakpoints, 'md')}) {
+      margin-right: 20px;
+      min-width: 300px;
+    }
+  }
+}
+
+.Backdrop {
+  bottom: 0;
+  left: 0;
+  opacity: 0.2;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.Details {
+  width: 100%;
+
+  &__General {
+    display: flex;
+
+    @include media-down(#{map-get($breakpoints, 'xl')}) {
+      flex-direction: column-reverse;
+      margin-top: 20px;
+    }
+
+    @include media-up(#{map-get($breakpoints, 'xl')}) {
+      align-items: flex-start;
+    }
+  }
+}
+
+.MovieTitle {
+  line-height: 1.2;
+
+  @include media-down(#{map-get($breakpoints, 'md')}) {
+    display: none;
+  }
+}
+
+.DetailsList {
+  columns: 2 200px;
+
+  @include media-up(#{map-get($breakpoints, 'xl')}) {
+    margin-right: 20px;
+    max-width: 300px;
+    width: 100%;
+  }
+
+  &__Item {
+    display: inline-block;
+    width: 100%;
+  }
+
+  dt,
+  dd {
+    background: rgba(255, 255, 255, 0.75);
+    padding: 8px;
+  }
+
+  dt {
+    padding-bottom: 0;
+  }
+
+  dd {
+    padding-top: 0;
+  }
+}
+
+.Overview {
+  background: rgba(255, 255, 255, 0.75);
+  padding: 10px;
+  width: 100%;
+
+  @include media-down(#{map-get($breakpoints, 'xl')}) {
+    margin-bottom: 20px;
+  }
+}

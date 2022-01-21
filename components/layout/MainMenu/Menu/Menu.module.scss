@@ -1,0 +1,16 @@
+@import '../../../../styles/settings';
+
+.Menu {
+  width: 100%;
+
+  :global(.ant-menu-overflow-item) {
+    color: #fff;
+  }
+}
+
+.AccountMenu {
+
+  @include media-up(#{map-get($breakpoints, 'md')}) {
+    display: none;
+  }
+}

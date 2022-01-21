@@ -1,0 +1,14 @@
+.InputField {
+  margin: 0;
+
+  &_m_Invalid {
+
+    &[class] {
+
+      &,
+      &:hover {
+        border-color: red;
+      }
+    }
+  }
+}

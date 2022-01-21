@@ -1,0 +1,19 @@
+.FormGroup {
+  margin-bottom: 10px;
+}
+
+.ErrorMessage {
+  color: red;
+  display: flex;
+  margin: 5px 5px 0;
+
+  &__Icon {
+    font-size: 18px;
+    margin-right: 6px;
+  }
+
+  &__Text {
+    line-height: 1.2;
+    margin-top: 2.5px;
+  }
+}

@@ -1,0 +1,85 @@
+@import '../../../styles/settings';
+
+.Menu {
+  $menu-width: 400px;
+  $icon-close-width: 50px;
+
+  @include media-down(#{map-get($breakpoints, 'md')}) {
+    display: none;
+  }
+
+  &_m_Humburger {
+    background: #fff;
+    bottom: 0;
+    left: 0;
+    max-width: $menu-width;
+    position: fixed;
+    right: 50px;
+    top: 0;
+    transition: all 0.5s;
+    z-index: 100;
+
+    @include media-down(#{map-get($breakpoints, 'md')}) {
+      display: flex;
+    }
+
+    @include media-up(#{map-get($breakpoints, 'md')}) {
+      left: -$menu-width - $icon-close-width;
+      right: $menu-width + $icon-close-width;
+    }
+  }
+
+  &_m_Hidden {
+    left: -$menu-width - $icon-close-width;
+    right: $menu-width + $icon-close-width;
+  }
+
+  &__CloseButton {
+    color: #fff;
+    font-size: 26px;
+    height: 38px;
+    line-height: 0.5;
+    padding: 5px;
+    position: absolute;
+    right: -38px;
+
+    &:hover,
+    &:focus {
+      color: #ccc;
+    }
+
+    @include media-up(#{map-get($breakpoints, 'md')}) {
+      display: none;
+    }
+  }
+
+  &__Container {
+    display: flex;
+
+    @include media-down(#{map-get($breakpoints, 'md')}) {
+      flex-direction: column;
+      overflow-y: auto;
+      width: 100%;
+    }
+  }
+}
+
+.Backdrop {
+  background: #000;
+  bottom: 0;
+  left: 0;
+  display: none;
+  opacity: 0.75;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 90;
+
+  @include media-down(#{map-get($breakpoints, 'md')}) {
+    display: block;
+
+    &_m_Hidden {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@import '../../../styles/settings';
+
+.Image {
+  background: lightgray;
+  display: flex;
+
+  &__Icon {
+    color: #aaa;
+    font-size: 60px;
+    margin: auto;
+  }
+}
+
+.Backdrop {
+  margin-top: 150%;
+}

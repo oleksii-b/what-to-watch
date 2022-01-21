@@ -1,0 +1,6 @@
+require('es6-object-assign').polyfill()
+require('@webcomponents/shadydom')
+require('@formatjs/intl-getcanonicallocales/polyfill')
+require('@formatjs/intl-locale/polyfill')
+require('@formatjs/intl-displaynames/polyfill')
+require('@formatjs/intl-displaynames/locale-data/en')

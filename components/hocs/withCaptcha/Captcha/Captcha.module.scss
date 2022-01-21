@@ -1,0 +1,40 @@
+@import '../../../../styles/settings';
+
+.Captcha {
+  align-items: center;
+  background: #fff;
+  border: 1px solid lightgray;
+  display: flex;
+  padding: 8px;
+
+  :global() {
+    text-align: center;
+  }
+
+  @include media-down(#{map-get($breakpoints, 'xxs')}) {
+    flex-direction: column-reverse;
+    margin: 0 auto;
+    max-width: 220px;
+  }
+
+  &__Input {
+    flex-grow: 1;
+
+    @include media-down(#{map-get($breakpoints, 'xxs')}) {
+      margin: 8px 6px -4px;
+    }
+
+    @include media-up(#{map-get($breakpoints, 'xxs')}) {
+      margin-left: 4px;
+      margin-bottom: -10px;
+    }
+  }
+
+  &__Canvas {
+
+    @include media-up(#{map-get($breakpoints, 'xxs')}) {
+      margin: 3px 0;
+      margin-right: -8px;
+    }
+  }
+}

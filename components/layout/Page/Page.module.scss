@@ -1,0 +1,37 @@
+@import '../../../styles/settings';
+
+.PageHeader {
+  background: lightsteelblue;
+  padding: 20px 0;
+
+  &__Container {
+
+    @include media-up(#{map-get($breakpoints, 'md')}) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.PageTitle {
+  font-family: Impact, fantasy;
+
+  @include media-up(#{map-get($breakpoints, 'md')}) {
+    align-items: center;
+    display: flex;
+    margin: 0;
+    min-height: 40px;
+  }
+}
+
+.PageContent {
+  background: lavender;
+  flex-grow: 1;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.Search {
+  max-width: 100%;
+  width: 400px;
+}

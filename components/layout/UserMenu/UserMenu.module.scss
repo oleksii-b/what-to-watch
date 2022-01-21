@@ -1,0 +1,19 @@
+@import '../../../styles/settings';
+
+.Menu {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+
+  @include media-down(#{map-get($breakpoints, 'md')}) {
+    border-top: 1px solid #eee;
+  }
+
+  @include media-up(#{map-get($breakpoints, 'md')}) {
+    margin: 0 -5px;
+  }
+
+  &__Item {
+    margin: 0 5px;
+  }
+}

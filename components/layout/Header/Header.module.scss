@@ -1,0 +1,95 @@
+@import '../../../styles/settings';
+
+.Header {
+  background: #123;
+  border-top: 5px solid cornflowerblue;
+  padding: 20px 0;
+
+  @include media-down(#{map-get($breakpoints, 'md')}) {
+    padding: 10px 0;
+  }
+
+  &__Container {
+    align-items: center;
+    display: flex;
+  }
+}
+
+.Title {
+  min-width: 180px;
+
+  &__Text {
+    color: deepskyblue;
+    display: inline-block;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 1;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+}
+
+.Logo {
+  display: inline-block;
+  vertical-align: middle;
+
+  &__Link {
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid blue;
+    color:deepskyblue;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    padding-bottom: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.25s;
+    width: 93px;
+
+    &:hover,
+    &:focus {
+      opacity: 0.75;
+    }
+  }
+
+  &__Letter {
+    font-size: 26px;
+
+    &:first-child {
+      transform: rotate(-8deg) translateY(5px);
+    }
+
+    &:last-child {
+      transform: rotate(8deg) translateY(5px);
+    }
+  }
+}
+
+.HumburgerMenu {
+  margin-left: auto;
+  padding: 5px 8px;
+
+  @include media-up(#{map-get($breakpoints, 'md')}) {
+    display: none;
+  }
+
+  &__Icon {
+    font-size: 20px;
+  }
+}
+
+.MainMenu {
+
+  @include media-up(#{map-get($breakpoints, 'md')}) {
+    width: 100%;
+  }
+}
+
+.AccountMenu {
+
+  @include media-down(#{map-get($breakpoints, 'md')}) {
+    display: none;
+  }
+}

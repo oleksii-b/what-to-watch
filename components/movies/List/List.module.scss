@@ -1,0 +1,66 @@
+@import '../../../styles/settings';
+
+$card-width: 220px;
+$card-margin: 8px;
+
+.List {
+  font-size: 0;
+  margin: $card-margin * 2 auto;
+  max-width: 100%;
+  width: $card-width + $card-margin * 2;
+
+  @include media-up(#{map-get($breakpoints, 'sm')}) {
+    width: $card-width * 2 + $card-margin * 4;
+  }
+
+  @include media-up(#{map-get($breakpoints, 'md')}) {
+    width: $card-width * 3 + $card-margin * 6;
+  }
+
+  @include media-up(#{map-get($breakpoints, 'lg')}) {
+    width: $card-width * 4 + $card-margin * 8;
+  }
+}
+
+.Card {
+  border-radius: 6px;
+  display: inline-block;
+  font-size: 14px;
+  margin: $card-margin;
+  max-width: $card-width;
+  overflow: hidden;
+  position: relative;
+  transition: 0.2s transform;
+  width: 100%;
+
+  &:hover {
+    transform: scale(1.05);
+    z-index: 3;
+  }
+
+  &__Image {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__Title {
+    background: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    font-size: 17px;
+    font-weight: 500;
+    left: 0;
+    line-height: 20px;
+    margin: 0;
+    padding: 6px 10px;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+  }
+
+  &__Link {
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    vertical-align: top;
+  }
+}

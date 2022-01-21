@@ -1,0 +1,9 @@
+.btn-group {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 -5px;
+
+  &__item {
+    margin: 0 5px;
+  }
+}

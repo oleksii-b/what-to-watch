@@ -1,0 +1,14 @@
+.ant-menu-light {
+  background: transparent;
+  border-bottom-color: transparent;
+}
+
+.ant-menu-horizontal {
+
+  .ant-menu-item {
+
+    &[class] {
+      padding: 0 6px;
+    }
+  }
+}
